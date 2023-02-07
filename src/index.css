@@ -1,0 +1,40 @@
+/* all globle style write here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Manrope:wght@600;700;800&display=swap');
+
+:root {
+    --font-inter: 'Inter', sans-serif;
+    --font-manrope: 'Manrope', sans-serif;
+
+    --bg-dark: #111827;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background: #424242;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #686868;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: var(--bg-dark);
+    font-family: var(--font-inter);
+}
