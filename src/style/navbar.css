@@ -26,6 +26,7 @@ nav {
 
 .logo img {
     width: 38px;
+    height: 38.45px;
 }
 
 .nav-links {
@@ -151,7 +152,7 @@ a.nav-link.active {
     }
 
     .menu_toggler {
-        padding: 12px;
+        padding: 11px;
         background: var(--btn-bg);
         display: grid;
         place-items: center;

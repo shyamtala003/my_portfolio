@@ -6,9 +6,9 @@
     --btn-bg-color: #e5e7eb;
     --btn-text-color-black: #1e293b;
 
-    --email-subscription-form-bg: #1e293b;
-    --input-bg: #111827;
-    --form-btn: #6366f1;
+    --newsletter-section-bg: #1e293b;
+    --newletter-input-bg: #111827;
+    --newsletter-submit-btn: #6366f1;
 }
 
 
@@ -212,6 +212,7 @@ section h3 {
 
 .blog_card .blog_text {
     margin-top: .5rem;
+    padding-inline: .2rem;
 }
 
 .blog_text h1.blog_heading {
@@ -231,9 +232,9 @@ section h3 {
     color: var(--text-secondary);
 }
 
-a.blog_link {
+.blog_section a.blog_link {
     display: inline-flex;
-    margin-top: 2rem;
+    margin-top: 3rem;
     align-items: center;
     justify-content: center;
     gap: 2px;
@@ -287,3 +288,113 @@ a.blog_link {
 }
 
 /* ------X---------X-----------blog.jsx component ----X------X-----*/
+
+
+/* -----------------newslatter subscription section start-------------------- */
+
+section.newsletter {
+    margin-top: 5rem;
+    padding-inline: var(--padding-inline);
+}
+
+.newsletter .content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 1rem;
+    padding: 4rem 2rem 2rem 2rem;
+    background: var(--newsletter-section-bg);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 1.5rem;
+}
+
+.newsletter .content h4.content_heading {
+    padding-block: 1rem;
+    font-family: var(--font-manrope);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.newsletter .content p.content_description {
+    padding-block: .7rem;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.newsletter .content p.note {
+    padding-block: 1rem;
+    font-family: var(--font-inter);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.newsletter form.news_subscription {
+    margin-top: -5rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.newsletter form.news_subscription input[type="email"] {
+    padding: 1rem 4rem 1rem 2rem;
+    border-radius: 2rem;
+    background: var(--newletter-input-bg);
+    border: 1px solid rgba(255, 255, 255, .4);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    caret-color: var(--text-highlight);
+}
+
+.newsletter form.news_subscription input[type="submit"] {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background: var(--newsletter-submit-btn);
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--font-inter);
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.newsletter form.news_subscription input[type="submit"]:hover {
+    opacity: .8;
+}
+
+@media screen and (max-width:1030px) {
+    .newsletter .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .newsletter form.news_subscription {
+        margin-top: 0rem;
+    }
+}
+
+
+@media screen and (max-width:580px) {
+    .newsletter form.news_subscription {
+        flex-direction: column;
+    }
+
+    .newsletter form.news_subscription input[type="submit"],
+    .newsletter form.news_subscription input[type="email"] {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* ---X-----------X---newslatter subscription section start----X----------X------ */

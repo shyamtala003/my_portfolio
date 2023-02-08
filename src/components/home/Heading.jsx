@@ -7,7 +7,7 @@ const Heading = () => {
     <main className="dark">
       <div className="heading">
         <h1 className="heading_text">
-          I'm <span>Shyam</span>. I'm a passionate frontend developer as well as
+          I'm <span>Shyam</span>. I'm a passionate frontend developer and
           blogger from India.
         </h1>
         <div className="devloper_img">
