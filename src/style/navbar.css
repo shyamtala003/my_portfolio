@@ -12,12 +12,13 @@
 }
 
 nav {
+    padding-inline: var(--padding-inline);
     position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 13%;
     padding-block: .3rem;
     background: var(--nav-bg);
     backdrop-filter: blur(16px);
@@ -74,17 +75,8 @@ a.nav-link.active {
     display: none;
 }
 
-@media screen and (max-width:1150px) {
-    nav {
-        padding-inline: 2%;
-    }
-}
 
 @media screen and (max-width:668px) {
-
-    nav {
-        padding-inline: 5%;
-    }
 
     .responsive_menu {
         display: block;
@@ -95,7 +87,6 @@ a.nav-link.active {
         left: 0%;
         background: rgb(17 24 39 / 80%);
         backdrop-filter: blur(4px) !important;
-        transition: all .5s ease;
     }
 
     .close_menu {
@@ -123,8 +114,8 @@ a.nav-link.active {
         gap: 1rem;
         color: var(--link-color);
         font-family: (--font-inter);
-        font-size: 8px;
-        font-weight: 400;
+        font-size: 16px;
+        font-weight: 600;
         line-height: 28px;
         text-transform: capitalize;
         border-radius: 2rem;

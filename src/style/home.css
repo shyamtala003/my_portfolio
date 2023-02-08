@@ -4,21 +4,26 @@
     --text-highlight: #2dd4bf;
 
     --btn-bg-color: #e5e7eb;
-    --btn-text-color-black: #1e293b
+    --btn-text-color-black: #1e293b;
+
+    --email-subscription-form-bg: #1e293b;
+    --input-bg: #111827;
+    --form-btn: #6366f1;
 }
+
 
 
 /* code for heading.jsx component */
 main {
-    padding-top: 12rem;
-    padding-inline: 13%;
+    padding-inline: var(--padding-inline);
     background: url('../assets/rays_bg.png') no-repeat;
-    background-size: 50%;
+    background-size: 60% 110%;
     background-position-x: center;
     background-position-y: -200px;
 }
 
 .heading {
+    padding-top: 12rem;
     width: 100%;
     display: grid;
     gap: 2rem;
@@ -93,24 +98,23 @@ a.about_link {
 
 @media screen and (max-width:1150px) {
     main {
-        padding-inline: 2%;
         background-size: 60%;
         background-position-x: center;
         background-position-y: -100px;
     }
+
 }
 
 @media screen and (max-width:730px) {
     main {
-        padding-inline: 5%;
         padding-top: 7rem;
         background-size: 100%;
         background-position-x: center;
         background-position-y: 0px;
     }
 
-
     .heading {
+        padding-top: 0rem;
         width: 100%;
         display: flex;
         align-items: center;
@@ -155,3 +159,131 @@ a.about_link {
         max-width: 480px;
     }
 }
+
+/*  X----------X----------------ended heading.jsx component --------X_-------X*/
+
+
+/* --------------------------blog.jsx component ---------------*/
+
+section {
+    padding-inline: var(--padding-inline);
+}
+
+section h1 {
+    font-family: var(--font-manrope);
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+section h3 {
+    margin-top: 2rem;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    color: var(--text-secondary);
+}
+
+.blogs_container {
+    margin-top: .8rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.blog_card .card_img {
+    width: 100%;
+    height: 393px;
+    min-height: 350px;
+    background: red;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.blog_card .card_img img {
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog_card .blog_text {
+    margin-top: .5rem;
+}
+
+.blog_text h1.blog_heading {
+    font-family: var(--font-manrope);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.blog_text p.blog_published_date {
+    margin-top: 1rem;
+    font-family: var(--font-inter);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+a.blog_link {
+    display: inline-flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 6px 24px;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 600;
+    border-radius: 2rem;
+    background: var(--btn-bg-color);
+    color: var(--btn-text-color-black);
+}
+
+
+@media screen and (max-width:1150px) {
+    .blogs_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width:670px) {
+
+    .blogs_container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+
+    .blog_card {
+        max-width: 100%;
+    }
+
+    .blog_card .card_img {
+        width: 100%;
+        min-height: 450px;
+        height: 450px;
+        background: red;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .blog_card .card_img img {
+        min-width: 100%;
+        min-height: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+}
+
+/* ------X---------X-----------blog.jsx component ----X------X-----*/

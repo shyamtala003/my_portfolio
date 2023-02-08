@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style/navbar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import logoWhite from "../assets/logo_white.svg";
 import logoDark from "../assets/logo_dark.svg";
@@ -14,6 +14,8 @@ import menuWhite from "../assets/menu_light.svg";
 import close from "../assets/close.svg";
 
 const Navbar = () => {
+  let location = useLocation();
+  useEffect(() => {}, [location]);
   const [menuToggler, setMenuToggler] = useState(false);
 
   const hideShowMenu = () => {
@@ -31,16 +33,34 @@ const Navbar = () => {
           <img src={logoWhite} alt="logo" />
         </div>
         <div className="nav-links">
-          <Link to="/" className="nav-link active">
+          <Link
+            to="/"
+            className={`nav-link ${location.pathname === "/" ? "active" : ""}`}
+          >
             home
           </Link>
-          <Link to="/about" className="nav-link">
+          <Link
+            to="/about"
+            className={`nav-link ${
+              location.pathname === "/about" ? "active" : ""
+            }`}
+          >
             about
           </Link>
-          <Link to="/projects" className="nav-link">
+          <Link
+            to="/projects"
+            className={`nav-link ${
+              location.pathname === "/projects" ? "active" : ""
+            }`}
+          >
             projects
           </Link>
-          <Link to="/blogs" className="nav-link">
+          <Link
+            to="/blogs"
+            className={`nav-link ${
+              location.pathname === "/blogs" ? "active" : ""
+            }`}
+          >
             blog
           </Link>
         </div>
@@ -58,22 +78,42 @@ const Navbar = () => {
         {/* responsive menubar */}
         <div
           onClick={hideShowMenu}
-          className={`responsive_menu ${menuToggler ? `close_menu` : ""}`}
+          className={`responsive_menu ${!menuToggler ? `close_menu` : ""}`}
         >
           <div className="responsive_nav_links">
             <button onClick={hideShowMenu} className="close_menu_btn">
               <img src={close} alt="theme_toogler" />
             </button>
-            <Link to="/" className="responsive_nav_link active">
+            <Link
+              to="/"
+              className={`responsive_nav_link ${
+                location.pathname === "/" ? "active" : ""
+              }`}
+            >
               home
             </Link>
-            <Link to="/about" className="responsive_nav_link">
+            <Link
+              to="/about"
+              className={`responsive_nav_link ${
+                location.pathname === "/about" ? "active" : ""
+              }`}
+            >
               about
             </Link>
-            <Link to="/projects" className="responsive_nav_link">
+            <Link
+              to="/projects"
+              className={`responsive_nav_link ${
+                location.pathname === "/projects" ? "active" : ""
+              }`}
+            >
               projects
             </Link>
-            <Link to="/blogs" className="responsive_nav_link">
+            <Link
+              to="/blogs"
+              className={`responsive_nav_link ${
+                location.pathname === "/blogs" ? "active" : ""
+              }`}
+            >
               blog
             </Link>
             <button className="theme_toggler">
