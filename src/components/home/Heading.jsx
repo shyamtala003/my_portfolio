@@ -1,6 +1,8 @@
 import React from "react";
 import devImage from "../../assets/shyam tala.png";
 import { Link } from "react-router-dom";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Heading = () => {
   return (
@@ -11,7 +13,7 @@ const Heading = () => {
           blogger from India.
         </h1>
         <div className="devloper_img">
-          <img src={devImage} alt="shyam tala" />
+          <LazyLoadImage alt="shyam tala" effect="blur" src={devImage} />
         </div>
       </div>
       <div className="btn_group">

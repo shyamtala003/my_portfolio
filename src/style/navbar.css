@@ -9,6 +9,7 @@
     --btn-bg: #1e293b;
 
     --responsive-menu-bg: #1f2937;
+    --responsive-menu-transparent-bg: rgba(17 24 39 / 80%);
 }
 
 nav {
@@ -22,6 +23,7 @@ nav {
     padding-block: .3rem;
     background: var(--nav-bg);
     backdrop-filter: blur(16px);
+    z-index: 5;
 }
 
 .logo img {
@@ -86,8 +88,8 @@ a.nav-link.active {
         position: absolute;
         top: 0%;
         left: 0%;
-        background: rgb(17 24 39 / 80%);
-        backdrop-filter: blur(4px) !important;
+        background: var(--responsive-menu-transparent-bg);
+        backdrop-filter: blur(10px);
     }
 
     .close_menu {

@@ -1,18 +1,31 @@
+import { useEffect } from "react";
 import Navbar from "./components/Navbar";
-import "./App.css";
+import Footer from "./components/Footer";
+import Topfixedimage from "./components/Topfixedimage";
+
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
 
+import "./index.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+import rayImage from "./assets/rays_bg.png";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
 
 function App() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <Router>
         <Navbar />
+        <Topfixedimage image={rayImage} />
         <Routes>
           <Route path="/" exact element={<Home />}></Route>
           <Route path="/about" exact element={<About />}></Route>

@@ -15,7 +15,16 @@ import close from "../assets/close.svg";
 
 const Navbar = () => {
   let location = useLocation();
-  useEffect(() => {}, [location]);
+  useEffect(() => {
+    if (location.pathname === "/") {
+      document.title = "Shyam Tala-Frontend Developer";
+    } else {
+      let getLocation = String(location.pathname).slice(1);
+      getLocation =
+        getLocation.slice(0, 1).toUpperCase() + getLocation.slice(1);
+      document.title = `Shyam Tala - ${getLocation}`;
+    }
+  }, [location]);
   const [menuToggler, setMenuToggler] = useState(false);
 
   const hideShowMenu = () => {

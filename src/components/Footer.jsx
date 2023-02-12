@@ -73,16 +73,16 @@ const Footer = () => {
         <p className="author">© {new Date().getFullYear()} Shyam Tala</p>
         <div className="social_links">
           <Link to="https://github.com/shyamtala003">
-            <i class="ri-github-fill"></i>
+            <i className="ri-github-fill"></i>
           </Link>
           <Link to="https://www.linkedin.com/in/shyam-tala-666828169/">
-            <i class="ri-linkedin-fill"></i>
+            <i className="ri-linkedin-fill"></i>
           </Link>
           <Link to="https://m.facebook.com/100011975868953/">
-            <i class="ri-facebook-fill"></i>
+            <i className="ri-facebook-fill"></i>
           </Link>
           <Link to="https://www.instagram.com/shyamtala_official/">
-            <i class="ri-instagram-line"></i>
+            <i className="ri-instagram-line"></i>
           </Link>
         </div>
       </div>

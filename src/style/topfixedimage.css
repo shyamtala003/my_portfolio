@@ -1,0 +1,30 @@
+.top_fixed_image {
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    height: auto;
+    z-index: -1;
+}
+
+@media screen and (max-width:1150px) {
+    .top_fixed_image {
+        position: absolute;
+        top: -30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 85%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .top_fixed_image {
+        position: absolute;
+        top: -10%;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+    }
+}

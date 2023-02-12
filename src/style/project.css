@@ -1,0 +1,196 @@
+.dark {
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-highlight: #2dd4bf;
+
+    --btn-bg-color: #e5e7eb;
+    --btn-text-color-black: #1e293b;
+
+    /* --project-card-1: linear-gradient(to bottom, rgba(88, 28, 135, .5), #a21caf); */
+}
+
+main {
+    padding-inline: var(--padding-inline);
+    margin-top: 6rem;
+}
+
+@media screen and (max-width:640px) {
+    main {
+        margin-top: 2rem;
+    }
+}
+
+
+/* heading component of project */
+.project_page_heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--font-manrope);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--text-highlight);
+}
+
+.project_page_heading_2 {
+    margin-top: .5rem;
+    text-align: center;
+    font-family: var(--font-manrope);
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+@media screen and (max-width:640px) {
+
+    .project_page_heading_2 {
+        text-align: center;
+        font-family: var(--font-manrope);
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+/* -------X--------x-heading component of project--X-----x------- */
+
+/* --------------------project card started-------------------------- */
+
+
+.project_container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.project_card {
+    position: relative;
+    padding: 2rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+
+
+.project_card:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0.1), rgba(0, 0, 0, .2)), url('../assets/bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(18px);
+}
+
+.project_card:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0.1), rgba(0, 0, 0, .2)), url('../assets/bg2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(18px);
+}
+
+.project_image {
+    z-index: 1;
+}
+
+.project_card .project_image img {
+    width: 100%;
+}
+
+.project_card .project_text_content {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 2rem;
+}
+
+.project_title {
+    font-family: var(--font-manrope);
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.project_description {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.project_text_content .btn_group {
+    margin-bottom: 2rem;
+    display: flex;
+    width: 100%;
+}
+
+.project_text_content .live_link {
+    max-width: 300px;
+    padding: .5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .7rem;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    line-height: 32px;
+    font-weight: 600;
+    color: var(--btn-text-color-black);
+    background: var(--btn-bg-color);
+    border-radius: 2rem;
+}
+
+.project_text_content .live_link:hover {
+    opacity: .9;
+}
+
+.project_text_content .live_link i.remix-icon {
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width:840px) {
+    .project_card {
+        padding: 0px;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+    }
+
+    .project_card::after {
+        content: '';
+        width: calc(100%);
+        height: calc(100%);
+        border-radius: 1rem;
+        border: 2px solid rgba(0, 0, 0, .5);
+    }
+
+    .project_image {
+        padding: 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .project_text_content {
+        padding: 2rem;
+        background: rgba(0, 0, 0, .4);
+        /* backdrop-filter: blur(12px); */
+    }
+}
+
+/* ---------X------X----project card started-------X-------------X-------- */
