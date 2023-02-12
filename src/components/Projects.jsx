@@ -3,17 +3,17 @@ import Heading from "./projects/Heading";
 import "../index.css";
 import "../style/project.css";
 import Projectcard from "./projects/Projectcard";
-import p1Image from "../assets/project_images/mediamodifier_image.png";
-import p2Image from "../assets/project_images/p2.png";
-import p3Image from "../assets/project_images/p3.png";
-import p4Image from "../assets/project_images/p4.png";
-import p5Image from "../assets/project_images/p5.png";
-import p6Image from "../assets/project_images/p6.png";
-import p7Image from "../assets/project_images/p7.png";
-import p8Image from "../assets/project_images/p8.png";
-import p9Image from "../assets/project_images/p9.png";
-import p10Image from "../assets/project_images/p10.png";
-import p11Image from "../assets/project_images/p11.png";
+import p1Image from "../assets/project_images/p1.webp";
+import p2Image from "../assets/project_images/p2.webp";
+import p3Image from "../assets/project_images/p3.webp";
+import p4Image from "../assets/project_images/p4.webp";
+import p5Image from "../assets/project_images/p5.webp";
+import p6Image from "../assets/project_images/p6.webp";
+import p7Image from "../assets/project_images/p7.webp";
+import p8Image from "../assets/project_images/p8.webp";
+import p9Image from "../assets/project_images/p9.webp";
+import p10Image from "../assets/project_images/p10.webp";
+import p11Image from "../assets/project_images/p11.webp";
 
 const Projects = () => {
   return (
