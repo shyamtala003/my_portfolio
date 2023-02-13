@@ -1,0 +1,257 @@
+.description {
+    margin-top: 2.5rem;
+}
+
+p.about_me_descrition {
+    font-family: var(--font-inter);
+    color: var(--text-secondary);
+    font-size: 18px;
+    line-height: 32px;
+}
+
+ul.about_me_list {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.about_me_list li {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 32px;
+}
+
+.about_me_list li a {
+    color: var(--text-highlight);
+}
+
+/* education and work section */
+.education_and_experience {
+    margin-top: 2rem;
+}
+
+.education_and_experience h3.education_section_title {
+    font-family: var(--font-manrope);
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    color: var(--text-primary);
+}
+
+p.edu_description {
+    margin-top: .5rem;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: var(--text-secondary);
+}
+
+.journey_graph {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.graph {
+    padding-left: 5%;
+    position: relative;
+}
+
+.graph::before {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -0%;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+}
+
+.graph::after {
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: -0%;
+    width: 20px;
+    height: 2px;
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255);
+}
+
+.graph .title-1 {
+    font-family: var(--font-manrope);
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.graph .title-2 {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.graph .title-3 {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+.graph .title-4 {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+.graph p.desc {
+    margin-top: 2rem;
+    font-family: var(--font-inter);
+    font-size: 18px;
+    line-height: 32px;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+
+@media screen and (max-width:500px) {
+
+    .graph .title-1 {
+        font-family: var(--font-manrope);
+        font-size: 20px;
+        line-height: 28px;
+        font-weight: 600;
+        color: var(--text-primary);
+    }
+
+    .graph .title-2 {
+        font-family: var(--font-inter);
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        color: var(--text-secondary);
+    }
+
+    .graph .title-3 {
+        font-family: var(--font-inter);
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+        color: var(--text-secondary);
+    }
+
+    .graph .title-4 {
+        font-family: var(--font-inter);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #6b7280;
+    }
+
+    .graph p.desc {
+        margin-top: 1rem;
+        font-family: var(--font-inter);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: var(--text-secondary);
+    }
+}
+
+/* skill section */
+.skill {
+    margin-top: 2rem;
+}
+
+.skill h4.skill_heading {
+    color: var(--text-primary);
+    font-family: var(--font-manrope);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.skill_flex-box {
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.skill_type_box .skill_heading {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-family: var(--font-manrope);
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 28px;
+}
+
+
+.skill_type_box .skill_data {
+    margin-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.skill_data .skill_name {
+    font-family: var(--font-inter);
+    color: var(--text-primary);
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-left: 10px;
+
+}
+
+.progress {
+    background: rgba(255, 255, 255, 0.1);
+    justify-content: flex-start;
+    border-radius: 10px;
+    align-items: center;
+    position: relative;
+    padding: 3px;
+    display: flex;
+    width: 100%;
+}
+
+.progress-value {
+    border-radius: 10px;
+    /* background: linear-gradient(to right, #4facfe, #00f2fe); */
+    height: 15px;
+}
+
+@media screen and (max-width:685px) {
+    .skill_flex-box {
+        margin-top: 1.5rem;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+    }
+
+    .skill_type_box .skill_heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .5rem;
+        font-family: var(--font-manrope);
+        color: var(--text-secondary);
+        font-size: 15px;
+        line-height: 28px;
+    }
+
+}

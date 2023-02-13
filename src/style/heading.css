@@ -1,0 +1,32 @@
+/* heading component of project */
+.project_page_heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: var(--font-manrope);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    color: var(--text-highlight);
+}
+
+.project_page_heading_2 {
+    margin-top: .5rem;
+    text-align: center;
+    font-family: var(--font-manrope);
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+@media screen and (max-width:640px) {
+
+    .project_page_heading_2 {
+        text-align: center;
+        font-family: var(--font-manrope);
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+/* -------X--------x-heading component of project--X-----x------- */

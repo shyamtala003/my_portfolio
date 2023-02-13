@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "./projects/Heading";
+import Heading from "./Heading";
 import "../index.css";
 import "../style/project.css";
 import Projectcard from "./projects/Projectcard";
@@ -19,7 +19,10 @@ const Projects = () => {
   return (
     <>
       <main className="projects dark">
-        <Heading />
+        <Heading
+          heading="project"
+          description="A selection of my favorite works."
+        />
         <section className="project_container">
           <Projectcard
             projectImage={p6Image}
