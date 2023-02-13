@@ -14,7 +14,12 @@ import menuWhite from "../assets/menu_light.svg";
 import close from "../assets/close.svg";
 
 const Navbar = () => {
+  // usestate for navbar open close
+  let [navbarDisplay, setNavbarDisplay] = useState(false);
+
+  // code for setting dynamic document title
   let location = useLocation();
+
   useEffect(() => {
     if (location.pathname === "/") {
       document.title = "Shyam Tala-Frontend Developer";
@@ -25,6 +30,30 @@ const Navbar = () => {
       document.title = `Shyam Tala - ${getLocation}`;
     }
   }, [location]);
+
+  // code for hide and show navba ron scroll
+  const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    let previousScrollPosition = 0;
+    let currentScrollPosition = 0;
+
+    window.addEventListener("scroll", function (e) {
+      // Get the new Value
+      currentScrollPosition = window.pageYOffset;
+
+      //Subtract the two and conclude
+      if (previousScrollPosition - currentScrollPosition < 0) {
+        setShow(false);
+      } else if (previousScrollPosition - currentScrollPosition > 0) {
+        setShow(true);
+      }
+
+      // Update the previous value
+      previousScrollPosition = currentScrollPosition;
+    });
+  }, []);
+
   const [menuToggler, setMenuToggler] = useState(false);
 
   const hideShowMenu = () => {
@@ -37,7 +66,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="dark">
+      <nav className={`dark ${!show && "hide_navbar"}`} id="navbar">
         <div className="logo">
           <img src={logoWhite} alt="logo" />
         </div>

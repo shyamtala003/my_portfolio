@@ -15,7 +15,7 @@
 nav {
     padding-inline: var(--padding-inline);
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -24,6 +24,11 @@ nav {
     background: var(--nav-bg);
     backdrop-filter: blur(16px);
     z-index: 5;
+    transition: .5s ease-in-out;
+}
+
+.hide_navbar {
+    top: -80px;
 }
 
 .logo img {
