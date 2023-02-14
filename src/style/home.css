@@ -52,6 +52,7 @@ h1.heading_text {
 .devloper_img img {
     width: 100%;
     min-width: 160px;
+    min-height: 160px;
     border-radius: 50%;
 }
 

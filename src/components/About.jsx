@@ -4,17 +4,11 @@ import { Link } from "react-router-dom";
 import "../style/about.css";
 
 const About = () => {
-  // useEffect(() => {
-  //   const fetchRepos = async () => {
-  //     const res = await fetch(
-  //       `https://api.github.com/users/shyamtala003/repos?per_page=6&sort=updated`
-  //     );
-  //     const data = await res.json();
-  //     console.log(data);
-  //   };
+  // code for scroll top on component render
+  (() => {
+    window.scrollTo(0, 0);
+  })();
 
-  //   fetchRepos();
-  // }, []);
   return (
     <main className="about dark">
       <Heading heading="about me" description="Here's my story." />

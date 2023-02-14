@@ -79,6 +79,7 @@ main {
 
 .project_card .project_image img {
     width: 100%;
+    min-height: 150px;
 }
 
 .project_card .project_text_content {
@@ -176,6 +177,7 @@ main {
 
 
     .project_card .project_image img {
+        min-height: 150px;
         border-radius: .2rem;
     }
 

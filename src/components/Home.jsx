@@ -5,6 +5,11 @@ import Heading from "./home/Heading";
 import NewsLetter from "./home/NewsLetter";
 
 const Home = () => {
+  // code for scroll top on component render
+  (() => {
+    window.scrollTo(0, 0);
+  })();
+
   return (
     <>
       <Heading />
