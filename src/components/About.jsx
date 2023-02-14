@@ -66,30 +66,24 @@ const About = () => {
           </div>
 
           <div className="graph">
-            <p className="title-1">
-              Atmiya Institute of Technology & Science(GTU)
-            </p>
-            <p className="title-2">
-              Gujarat Technological University, Ahmedbabd
-            </p>
-            <p className="title-3">June 2018 - Aug 2021</p>
+            <p className="title-1">Udemy</p>
+            <p className="title-3">Dec 2021 - May 2022</p>
             <p className="desc">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Dignissimos, sit.
+              Learn PHP and MySql from Udemy and at a time work on some
+              e-commerce projects.
+              <br />
             </p>
           </div>
 
           <div className="graph">
-            <p className="title-1">
-              Atmiya Institute of Technology & Science(GTU)
-            </p>
-            <p className="title-2">
-              Gujarat Technological University, Ahmedbabd
-            </p>
-            <p className="title-3">June 2018 - Aug 2021</p>
+            <p className="title-1">Intern at iNeuron.ai(PWSkills)</p>
+            <p className="title-2">Bengaluru, Karnataka, India · Remote</p>
+            <p className="title-3">June 2022 - Present</p>
             <p className="desc">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Dignissimos, sit.
+              Working as a Full Stack JavaSCript Development Intern
+              <br />
+              Skills: Node.js · React.js(TailwindCss,SASS) · MongoDB ·
+              Express.js
             </p>
           </div>
         </div>
