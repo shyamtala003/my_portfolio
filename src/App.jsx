@@ -8,6 +8,9 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
 
+// import particular blog components
+import Iife from "./components/All_blogs/Iife";
+
 import "./index.css";
 
 import AOS from "aos";
@@ -31,6 +34,9 @@ function App() {
           <Route path="/about" exact element={<About />}></Route>
           <Route path="/projects" exact element={<Projects />}></Route>
           <Route path="/blogs" exact element={<Blogs />}></Route>
+
+          {/* all blogs route */}
+          <Route path="/iife" exact element={<Iife></Iife>}></Route>
         </Routes>
         <Footer />
       </Router>

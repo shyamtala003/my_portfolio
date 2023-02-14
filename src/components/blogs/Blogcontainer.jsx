@@ -1,23 +1,21 @@
 import React from "react";
-import blog1Image from "../../assets/blog_images/iife.png";
 import blog2Image from "../../assets/blog_images/glowing_gradient_background_tailwind_banner.webp";
 import blog3Image from "../../assets/blog_images/glassmorphism_navbar_banner.webp";
+import iife from "../../assets/blog_images/iife.png";
 import { Link } from "react-router-dom";
 import Blogcard from "./Blogcard";
+import "./blog.css";
 
-const Blog = () => {
+const Blogcontainer = () => {
   return (
     <>
-      <section className="dark blog_section">
-        <h1>I love to share my knowledge through writing.</h1>
-        <h3>Check out a few of my recent publishings.</h3>
-
+      <main className="dark blog_section">
         <div className="blogs_container">
           <Blogcard
-            blogLink="/iife"
-            blogImage={blog1Image}
+            blogLink="/"
+            blogImage={iife}
             blogHeading="Immediately Invoked Function Expression (IIFE)"
-            blogPublishedDate="June 11, 2022"
+            blogPublishedDate="June 27,2022"
           ></Blogcard>
 
           <Blogcard
@@ -39,9 +37,9 @@ const Blog = () => {
         <Link to="/blog" className="blog_link">
           See all articles<i className="ri-arrow-right-s-line"></i>
         </Link>
-      </section>
+      </main>
     </>
   );
 };
 
-export default Blog;
+export default Blogcontainer;

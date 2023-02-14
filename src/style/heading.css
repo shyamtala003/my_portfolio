@@ -10,7 +10,8 @@
 }
 
 .project_page_heading_2 {
-    margin-top: .5rem;
+    max-width: 600px;
+    margin: .5rem auto 0 auto;
     text-align: center;
     font-family: var(--font-manrope);
     font-size: 48px;

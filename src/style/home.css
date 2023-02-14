@@ -195,6 +195,10 @@ section.blog_section h3 {
     object-fit: cover;
 }
 
+.blog_card:hover .card_img img.blog_image {
+    opacity: .7;
+}
+
 .blog_card .blog_text {
     margin-top: .5rem;
     padding-inline: .2rem;
