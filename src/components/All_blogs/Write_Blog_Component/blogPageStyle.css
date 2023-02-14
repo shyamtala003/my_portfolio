@@ -36,7 +36,7 @@ img.blog_image {
 }
 
 p.blog_paragaph {
-    width: 90%;
+    width: 98%;
     margin: 1.3rem auto 0 auto;
     font-family: var(--font-inter);
     color: var(--text-secondary);
@@ -46,8 +46,17 @@ p.blog_paragaph {
 }
 
 .code_block {
-    width: 90%;
+    width: 98%;
     margin: 1.3rem auto 3rem auto;
+}
+
+h1.blog_headin_1 {
+    margin-top: 1.5rem;
+    font-family: var(--font-manrope);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--text-primary);
 }
 
 @media screen and (max-width:640px) {

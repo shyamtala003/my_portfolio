@@ -8,9 +8,6 @@ import Projects from "./components/Projects";
 import About from "./components/About";
 import Blogs from "./components/Blogs";
 
-// import particular blog components
-import Iife from "./components/All_blogs/Iife";
-
 import "./index.css";
 
 import AOS from "aos";
@@ -19,6 +16,10 @@ import "aos/dist/aos.css";
 import rayImage from "./assets/rays_bg.png";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+// import particular blog components
+import Iife from "./components/All_blogs/Iife";
+import Excecontext from "./components/All_blogs/Excecontext";
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
 
           {/* all blogs route */}
           <Route path="/iife" exact element={<Iife></Iife>}></Route>
+          <Route path="/Excecontext" exact element={<Excecontext />}></Route>
         </Routes>
         <Footer />
       </Router>

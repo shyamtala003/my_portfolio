@@ -1,27 +1,26 @@
 import React from "react";
-import blog2Image from "../../assets/blog_images/glowing_gradient_background_tailwind_banner.webp";
+import blog2Image from "../../assets/blog_images/excContext.avif";
 import blog3Image from "../../assets/blog_images/glassmorphism_navbar_banner.webp";
 import iife from "../../assets/blog_images/iife.png";
 import { Link } from "react-router-dom";
 import Blogcard from "./Blogcard";
-import "./blog.css";
 
 const Blogcontainer = () => {
   return (
     <>
-      <main className="dark blog_section">
+      <section className="dark blog_section_ main">
         <div className="blogs_container">
           <Blogcard
-            blogLink="/"
+            blogLink="/iife"
             blogImage={iife}
             blogHeading="Immediately Invoked Function Expression (IIFE)"
             blogPublishedDate="June 27,2022"
           ></Blogcard>
 
           <Blogcard
-            blogLink="/"
+            blogLink="/Excecontext"
             blogImage={blog2Image}
-            blogHeading="Tailwind Gradients - How to Make a Glowing Gradient Background"
+            blogHeading="What is an Execution Context in JavaScript?"
             blogPublishedDate="February 8,2022"
           ></Blogcard>
 
@@ -33,11 +32,7 @@ const Blogcontainer = () => {
             blogPublishedDate="April 21,2022"
           ></Blogcard>
         </div>
-
-        <Link to="/blog" className="blog_link">
-          See all articles<i className="ri-arrow-right-s-line"></i>
-        </Link>
-      </main>
+      </section>
     </>
   );
 };
