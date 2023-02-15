@@ -13,11 +13,18 @@ import Blogheading1 from "./Write_Blog_Component/Blogheading1";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 const Hoisting = () => {
   (() => {
     window.scrollTo(0, 0);
   })();
 
+  <Router>
+    <Routes>
+      <Route path="/hoisting" exact element={<Hoisting />}></Route>
+    </Routes>
+  </Router>;
   return (
     <>
       <Navbar></Navbar>
