@@ -8,10 +8,23 @@
 
     --newsletter-section-bg: #1e293b;
     --newletter-input-bg: #111827;
+    --newletter-input-border: rgba(255, 255, 255, .4);
     --newsletter-submit-btn: #6366f1;
 }
 
+.light {
+    --text-primary: #111827;
+    --text-secondary: #334155;
+    --text-highlight: #14b8a6;
 
+    --btn-bg-color: #1e293b;
+    --btn-text-color-black: #ffffff;
+
+    --newsletter-section-bg: #f8fafc;
+    --newletter-input-bg: #f8f8f8;
+    --newletter-input-border: rgba(0, 0, 0, .4);
+    --newsletter-submit-btn: #6366f1;
+}
 
 /* code for heading.jsx component */
 main {
@@ -292,7 +305,7 @@ section.newsletter {
     gap: 1rem;
     padding: 4rem 2rem 2rem 2rem;
     background: var(--newsletter-section-bg);
-    border: 1px solid rgba(255, 255, 255, .2);
+    border: 1px solid var(--newletter-input-border);
     border-radius: 1.5rem;
 }
 
@@ -334,7 +347,7 @@ section.newsletter {
     padding: 1rem 4rem 1rem 2rem;
     border-radius: 2rem;
     background: var(--newletter-input-bg);
-    border: 1px solid rgba(255, 255, 255, .4);
+    border: 1px solid var(--newletter-input-border);
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-primary);
@@ -349,7 +362,7 @@ section.newsletter {
     font-size: 1rem;
     font-weight: 500;
     font-family: var(--font-inter);
-    color: var(--text-primary);
+    color: #ffffff;
     cursor: pointer;
 }
 

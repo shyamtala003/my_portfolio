@@ -15,7 +15,7 @@ import p9Image from "../assets/project_images/p9.webp";
 import p10Image from "../assets/project_images/p10.webp";
 import p11Image from "../assets/project_images/p11.webp";
 
-const Projects = () => {
+const Projects = ({ theme }) => {
   // code for scroll top on component render
   (() => {
     window.scrollTo(0, 0);
@@ -23,7 +23,7 @@ const Projects = () => {
 
   return (
     <>
-      <main className="projects dark">
+      <main className={`${theme === "dark" ? "dark" : "light"} projects`}>
         <Heading
           heading="project"
           description="A selection of my favorite works."

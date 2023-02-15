@@ -5,10 +5,12 @@ import blog3Image from "../../assets/blog_images/hoisting.webp";
 import { Link } from "react-router-dom";
 import Blogcard from "./Blogcard";
 
-const Blog = () => {
+const Blog = ({ theme }) => {
   return (
     <>
-      <section className="dark blog_section">
+      <section
+        className={`${theme === "dark" ? "dark" : "light"} blog_section`}
+      >
         <h1>I love to share my knowledge through writing.</h1>
         <h3>Check out a few of my recent publishings.</h3>
 

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const Heading = () => {
+const Heading = ({ theme }) => {
   return (
-    <main className="dark">
+    <main className={theme === "dark" ? "dark" : "light"}>
       <div className="heading">
         <h1 className="heading_text">
           I'm <span>Shyam</span>. I'm a passionate frontend developer and

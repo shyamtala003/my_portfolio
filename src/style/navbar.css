@@ -12,6 +12,20 @@
     --responsive-menu-transparent-bg: rgba(17 24 39 / 80%);
 }
 
+.light {
+
+    --nav-bg: rgba(255, 255, 255, .5);
+
+    --link-color: #687280;
+    --link-active: #2dd4bf;
+    --link-hover: #1f1f1f;
+
+    --btn-bg: #e5e7eb;
+
+    --responsive-menu-bg: #ffffff;
+    --responsive-menu-transparent-bg: rgba(255, 255, 255, 80%);
+}
+
 nav {
     padding-inline: var(--padding-inline);
     position: fixed;

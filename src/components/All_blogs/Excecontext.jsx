@@ -8,14 +8,14 @@ import "../All_blogs/Write_Blog_Component/blogPageStyle.css";
 import Blogheading1 from "./Write_Blog_Component/Blogheading1";
 import img1 from "../../assets/blog_images/context.avif";
 
-const Excecontext = () => {
+const Excecontext = ({ theme }) => {
   // code for scroll top on component render
   (() => {
     window.scrollTo(0, 0);
   })();
   return (
     <>
-      <main className="blog dark">
+      <main className={`blog ${theme === "dark" ? "dark" : "light"}`}>
         <BlogHeading
           heaaidng="What is an Execution Context in JavaScript?"
           publishedDate="June 11, 2022"

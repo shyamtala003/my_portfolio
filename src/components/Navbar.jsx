@@ -13,7 +13,7 @@ import menuWhite from "../assets/menu_light.svg";
 
 import close from "../assets/close.svg";
 
-const Navbar = () => {
+const Navbar = ({ theme, setTheme }) => {
   // usestate for navbar open close
   let [navbarDisplay, setNavbarDisplay] = useState(false);
 
@@ -64,24 +64,16 @@ const Navbar = () => {
     }
   };
 
-  let getTheme = "dark";
-  const themeToggler = () => {
-    if (!localStorage.getItem("theme")) {
-      localStorage.setItem("theme", "dark");
-      getTheme = dark;
-    }
-
-    if (localStorage.getItem("theme")) {
-      getTheme = localStorage.getItem("theme");
-    }
-  };
-  themeToggler();
-
   return (
     <>
-      <nav className={`dark ${!show && "hide_navbar"}`} id="navbar">
+      <nav
+        className={`${theme === "dark" ? "dark" : "light"} ${
+          !show && "hide_navbar"
+        }`}
+        id="navbar"
+      >
         <div className="logo">
-          <img src={logoWhite} alt="logo" />
+          <img src={theme === "dark" ? logoWhite : logoDark} alt="logo" />
         </div>
         <div className="nav-links">
           <Link
@@ -117,13 +109,25 @@ const Navbar = () => {
         </div>
 
         {/* theme toggler */}
-        <button className="theme_toggler">
-          <img src={sun} alt="theme_toogler" />
+        <button
+          className="theme_toggler"
+          onClick={() => {
+            if (theme === "dark") {
+              setTheme("light");
+            } else {
+              setTheme("dark");
+            }
+          }}
+        >
+          <img src={theme === "dark" ? sun : moon} alt="theme_toogler" />
         </button>
 
         {/* responsive menu toggler button */}
         <button onClick={hideShowMenu} className="menu_toggler">
-          <img src={menuDark} alt="menu_toggler" />
+          <img
+            src={theme === "dark" ? menuDark : menuWhite}
+            alt="menu_toggler"
+          />
         </button>
 
         {/* responsive menubar */}
@@ -167,8 +171,19 @@ const Navbar = () => {
             >
               blog
             </Link>
-            <button className="theme_toggler">
-              <img src={sun} alt="theme_toogler" /> change theme
+
+            <button
+              className="theme_toggler"
+              onClick={() => {
+                if (theme === "dark") {
+                  setTheme("light");
+                } else {
+                  setTheme("dark");
+                }
+              }}
+            >
+              <img src={theme === "dark" ? sun : moon} alt="theme_toogler" />
+              change theme
             </button>
           </div>
         </div>

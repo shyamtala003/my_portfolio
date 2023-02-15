@@ -5,10 +5,12 @@ import iife from "../../assets/blog_images/iife.png";
 import { Link } from "react-router-dom";
 import Blogcard from "./Blogcard";
 
-const Blogcontainer = () => {
+const Blogcontainer = ({ theme }) => {
   return (
     <>
-      <section className="dark blog_section_ main">
+      <section
+        className={`${theme === "dark" ? "dark" : "light"} blog_section_ main`}
+      >
         <div className="blogs_container">
           <Blogcard
             blogLink="/iife"

@@ -1,9 +1,9 @@
 import React from "react";
 
-const NewsLetter = () => {
+const NewsLetter = ({ theme }) => {
   return (
     <>
-      <section className="newsletter dark">
+      <section className={`${theme === "dark" ? "dark" : "light"} newsletter`}>
         <div className="content">
           <div className="text_content">
             <h4 className="content_heading">

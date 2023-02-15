@@ -6,6 +6,14 @@
     --footer-submit-btn: #6366f1;
 }
 
+.light {
+    --text-primary: #111827;
+    --text-secondary: #485363;
+
+    --footer-input-bg: #ffffff;
+    --footer-submit-btn: #6366f1;
+}
+
 footer {
     padding-inline: var(--padding-inline);
     margin-top: 4rem;
@@ -112,7 +120,7 @@ form.footer_form {
     background: var(--footer-submit-btn);
     font-size: 16px;
     line-height: 24px;
-    color: var(--text-primary);
+    color: #ffffff;
     border-radius: 3rem;
     cursor: pointer;
 }

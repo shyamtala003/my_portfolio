@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../style/footer.css";
 
-const Footer = () => {
+const Footer = ({ theme }) => {
   return (
-    <footer className="dark">
+    <footer className={`${theme === "dark" ? "dark" : "light"}`}>
       <hr />
       <div className="footer_content">
         <div className="footer_links">

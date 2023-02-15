@@ -3,7 +3,7 @@ import Heading from "./Heading";
 import { Link } from "react-router-dom";
 import "../style/about.css";
 
-const About = () => {
+const About = ({ theme }) => {
   // code for scroll top on component render
   (() => {
     window.scrollTo(0, 0);
@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <>
-      <main className="about dark">
+      <main className={`about ${theme === "dark" ? "dark" : "light"}`}>
         <Heading heading="about me" description="Here's my story." />
         <div className="description">
           <p className="about_me_descrition">

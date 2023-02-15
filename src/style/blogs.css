@@ -1,3 +1,21 @@
+.dark {
+    --text-primary: #ffffff;
+    --text-secondary: #cbd5e1;
+    --text-highlight: #2dd4bf;
+
+    --btn-bg-color: #e5e7eb;
+    --btn-text-color-black: #1e293b;
+}
+
+.light {
+    --text-primary: #111827;
+    --text-secondary: #334155;
+    --text-highlight: #14b8a6;
+
+    --btn-bg-color: #1e293b;
+    --btn-text-color-black: #ffffff;
+}
+
 section.blog_section {
     margin-top: 3rem;
     width: 100%;

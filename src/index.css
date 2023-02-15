@@ -5,10 +5,14 @@
     --font-inter: 'Inter', sans-serif;
     --font-manrope: 'Manrope', sans-serif;
 
-    --bg-dark: #111827;
 
     --padding-inline: 13%;
+    --bg-dark: #111827;
 }
+
+
+
+
 
 html {
     scroll-behavior: smooth;
@@ -56,6 +60,6 @@ body {
     max-height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    background-color: var(--bg-dark);
+    /* background-color: var(--bg-dark); */
     font-family: var(--font-inter);
 }

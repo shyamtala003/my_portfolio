@@ -11,14 +11,14 @@ import Mainpoint from "./Write_Blog_Component/Mainpoint";
 import Underpoint from "./Write_Blog_Component/Underpoint";
 import Blogheading1 from "./Write_Blog_Component/Blogheading1";
 
-const Hoisting = () => {
+const Hoisting = ({ theme }) => {
   (() => {
     window.scrollTo(0, 0);
   })();
 
   return (
     <>
-      <main className="blog dark">
+      <main className={`blog ${theme === "dark" ? "dark" : "light"}`}>
         <BlogHeading
           heaaidng="What is Hoisting in JavaScript?🤔"
           publishedDate="June 24, 2022"

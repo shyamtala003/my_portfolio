@@ -6,14 +6,14 @@ import BlogmainImage from "./Write_Blog_Component/BlogmainImage";
 import Blogpara from "./Write_Blog_Component/Blogpara";
 import Blogcode from "./Write_Blog_Component/Blogcode";
 
-const Iife = () => {
+const Iife = ({ theme }) => {
   // code for scroll top on component render
   (() => {
     window.scrollTo(0, 0);
   })();
   return (
     <>
-      <main className="blog dark">
+      <main className={`blog ${theme === "dark" ? "dark" : "light"}`}>
         <BlogHeading
           heaaidng="Immediately Invoked Function Expression (IIFE)"
           publishedDate="June 11, 2022"
