@@ -17,7 +17,7 @@ const Heading = () => {
         </div>
       </div>
       <div className="btn_group">
-        <Link to="/blog" className="blog_link">
+        <Link to="/blogs" className="blog_link">
           Read the blogs <i className="ri-arrow-right-s-line"></i>
         </Link>
         <Link to="/about" className="about_link">

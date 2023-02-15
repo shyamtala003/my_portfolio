@@ -64,6 +64,19 @@ const Navbar = () => {
     }
   };
 
+  let getTheme = "dark";
+  const themeToggler = () => {
+    if (!localStorage.getItem("theme")) {
+      localStorage.setItem("theme", "dark");
+      getTheme = dark;
+    }
+
+    if (localStorage.getItem("theme")) {
+      getTheme = localStorage.getItem("theme");
+    }
+  };
+  themeToggler();
+
   return (
     <>
       <nav className={`dark ${!show && "hide_navbar"}`} id="navbar">
