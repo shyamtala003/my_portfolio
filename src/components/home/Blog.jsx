@@ -1,7 +1,7 @@
 import React from "react";
 import blog1Image from "../../assets/blog_images/iife.png";
-import blog2Image from "../../assets/blog_images/glowing_gradient_background_tailwind_banner.webp";
-import blog3Image from "../../assets/blog_images/glassmorphism_navbar_banner.webp";
+import blog2Image from "../../assets/blog_images/excecontext.webp";
+import blog3Image from "../../assets/blog_images/hoisting.webp";
 import { Link } from "react-router-dom";
 import Blogcard from "./Blogcard";
 
@@ -21,17 +21,16 @@ const Blog = () => {
           ></Blogcard>
 
           <Blogcard
-            blogLink="/"
+            blogLink="/Excecontext"
             blogImage={blog2Image}
-            blogHeading="Tailwind Gradients - How to Make a Glowing Gradient Background"
+            blogHeading="What is an Execution Context in JavaScript?"
             blogPublishedDate="February 8,2022"
           ></Blogcard>
 
           <Blogcard
-            blogLink="/"
+            blogLink="/hoisting"
             blogImage={blog3Image}
-            blogHeading="Build a Glassmorphic Navbar with TailwindCSS backdrop-filter &
-            backdrop-blur"
+            blogHeading="What is Hoisting in JavaScript?🤔"
             blogPublishedDate="April 21,2022"
           ></Blogcard>
         </div>

@@ -61,7 +61,7 @@ The browser creates a global execution context with two components, namely memor
       <Blogpara BlogParagraph="In the memory creation phase, JavaScript will scan through all the code and allocate memory to all the variables and functions in the code.For variables, JavaScript will store undefined in the memory creation phase, and for functions, it will keep the entire function code, which we will be looking at the following example."></Blogpara>
 
       <BlogmainImage Blogimage={img1}></BlogmainImage>
-      <BlogHeading heaaidng="Code Execution Phase"></BlogHeading>
+      <Blogheading1 heaaidng="Code Execution Phase"></Blogheading1>
       <Blogpara BlogParagraph="Now, in the 2nd phase, i.e. code execution, it starts going through the whole code line by line."></Blogpara>
       <Blogpara BlogParagraph="As it encounters var a = 2, it assigns 2 to ‘a’ in memory. Until now, the value of ‘a’ was undefined."></Blogpara>
       <Blogpara BlogParagraph="Similarly, it does the same thing for the b variable. It assigns 4 to ‘b’. Then it calculates and stores the value of the sum in memory which is 6. Now, in the last step, it prints the sum value in the console and then destroys the global execution context as our code is finished."></Blogpara>

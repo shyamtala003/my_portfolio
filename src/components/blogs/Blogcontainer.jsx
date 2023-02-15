@@ -1,6 +1,6 @@
 import React from "react";
-import blog2Image from "../../assets/blog_images/excContext.avif";
-import blog3Image from "../../assets/blog_images/glassmorphism_navbar_banner.webp";
+import blog2Image from "../../assets/blog_images/excecontext.webp";
+import blog3Image from "../../assets/blog_images/hoisting.webp";
 import iife from "../../assets/blog_images/iife.png";
 import { Link } from "react-router-dom";
 import Blogcard from "./Blogcard";
@@ -25,10 +25,9 @@ const Blogcontainer = () => {
           ></Blogcard>
 
           <Blogcard
-            blogLink="/"
+            blogLink="/hoisting"
             blogImage={blog3Image}
-            blogHeading="Build a Glassmorphic Navbar with TailwindCSS backdrop-filter &
-            backdrop-blur"
+            blogHeading="What is Hoisting in JavaScript"
             blogPublishedDate="April 21,2022"
           ></Blogcard>
         </div>
