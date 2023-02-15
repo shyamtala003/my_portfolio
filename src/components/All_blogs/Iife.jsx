@@ -5,8 +5,6 @@ import mainImage from "../../assets/blog_images/iife.png";
 import BlogmainImage from "./Write_Blog_Component/BlogmainImage";
 import Blogpara from "./Write_Blog_Component/Blogpara";
 import Blogcode from "./Write_Blog_Component/Blogcode";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 
 const Iife = () => {
   // code for scroll top on component render
@@ -15,7 +13,6 @@ const Iife = () => {
   })();
   return (
     <>
-      <Navbar></Navbar>
       <main className="blog dark">
         <BlogHeading
           heaaidng="Immediately Invoked Function Expression (IIFE)"
@@ -53,7 +50,6 @@ console.log(result); // output: 7
 
         <Blogpara BlogParagraph="Overall, IIFEs are a useful tool for creating self-contained, modular code in JavaScript. They allow for better variable scoping and encapsulation, and can help improve the organization and readability of your code."></Blogpara>
       </main>
-      <Footer />
     </>
   );
 };

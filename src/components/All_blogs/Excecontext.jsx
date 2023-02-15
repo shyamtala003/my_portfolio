@@ -7,8 +7,6 @@ import Blogcode from "./Write_Blog_Component/Blogcode";
 import "../All_blogs/Write_Blog_Component/blogPageStyle.css";
 import Blogheading1 from "./Write_Blog_Component/Blogheading1";
 import img1 from "../../assets/blog_images/context.avif";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
 
 const Excecontext = () => {
   // code for scroll top on component render
@@ -17,7 +15,6 @@ const Excecontext = () => {
   })();
   return (
     <>
-      <Navbar />
       <main className="blog dark">
         <BlogHeading
           heaaidng="What is an Execution Context in JavaScript?"
@@ -95,7 +92,6 @@ It will search all of the code for all variable and function declarations (varia
 As a result, if you mistakenly sent harmful code as an argument, or if a hostile party uses this area of your code, your website might be badly harmed. This function is not recommended because there are better alternatives."
         ></Blogpara>
       </main>
-      <Footer />
     </>
   );
 };

@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import Heading from "./Heading";
 import { Link } from "react-router-dom";
 import "../style/about.css";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 const About = () => {
   // code for scroll top on component render
@@ -13,7 +11,6 @@ const About = () => {
 
   return (
     <>
-      <Navbar> </Navbar>
       <main className="about dark">
         <Heading heading="about me" description="Here's my story." />
         <div className="description">
@@ -243,7 +240,6 @@ const About = () => {
           </section>
         </div>
       </main>
-      <Footer></Footer>
     </>
   );
 };

@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Topfixedimage from "./components/Topfixedimage";
 
 import Home from "./components/Home";
@@ -27,6 +29,7 @@ function App() {
   return (
     <>
       <Router>
+        <Navbar />
         <Topfixedimage image={rayImage} />
         <Routes>
           <Route path="/" exact element={<Home />}></Route>
@@ -39,6 +42,7 @@ function App() {
           <Route path="/Excecontext" exact element={<Excecontext />}></Route>
           <Route path="/hoisting" exact element={<Hoisting />}></Route>
         </Routes>
+        <Footer />
       </Router>
     </>
   );

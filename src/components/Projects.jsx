@@ -1,7 +1,5 @@
 import React from "react";
 import Heading from "./Heading";
-import Navabar from "./Navbar";
-import Footer from "./Footer";
 import "../index.css";
 import "../style/project.css";
 import Projectcard from "./projects/Projectcard";
@@ -25,7 +23,6 @@ const Projects = () => {
 
   return (
     <>
-      <Navabar />
       <main className="projects dark">
         <Heading
           heading="project"
@@ -134,7 +131,6 @@ const Projects = () => {
           />
         </section>
       </main>
-      <Footer />
     </>
   );
 };

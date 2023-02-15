@@ -10,24 +10,14 @@ import Tableofcontentheading from "./Write_Blog_Component/Tableofcontentheading"
 import Mainpoint from "./Write_Blog_Component/Mainpoint";
 import Underpoint from "./Write_Blog_Component/Underpoint";
 import Blogheading1 from "./Write_Blog_Component/Blogheading1";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const Hoisting = () => {
   (() => {
     window.scrollTo(0, 0);
   })();
 
-  <Router>
-    <Routes>
-      <Route path="/hoisting" exact element={<Hoisting />}></Route>
-    </Routes>
-  </Router>;
   return (
     <>
-      <Navbar></Navbar>
       <main className="blog dark">
         <BlogHeading
           heaaidng="What is Hoisting in JavaScript?🤔"
@@ -180,7 +170,6 @@ This magic protects our code from wrong calls that may be made before the functi
         ></Blogpara>
         <Blogpara BlogParagraph="•The error Uncaught TypeError: message is not a function occurs."></Blogpara>
       </main>
-      <Footer />
     </>
   );
 };
