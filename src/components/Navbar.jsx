@@ -67,9 +67,9 @@ const Navbar = ({ theme, setTheme }) => {
   return (
     <>
       <nav
-        className={`${theme === "dark" ? "dark" : "light"} ${
-          !show && "hide_navbar"
-        }`}
+        className={`
+        ${theme === "dark" ? "dark" : "light"} 
+        ${!show && "hide_navbar"}`}
         id="navbar"
       >
         <div className="logo">
