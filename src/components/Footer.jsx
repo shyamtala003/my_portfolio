@@ -26,29 +26,29 @@ const Footer = ({ theme }) => {
 
           <div className="link_list">
             <p className="link_heading">extra</p>
-            <Link to="/" className="link">
+            <Link to="/" className="link link_under_construction" title="Page Under Construction">
               changelog
             </Link>
-            <Link to="/" className="link">
+            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               meet up
             </Link>
-            <Link to="/" className="link">
+            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               newsletter
             </Link>
-            <Link to="/" className="link">
+            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               resume
             </Link>
-            <Link to="/" className="link">
+            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               snippets
             </Link>
           </div>
 
           <div className="link_list">
             <p className="link_heading">specifics</p>
-            <Link to="/" className="link">
+            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               stats
             </Link>
-            <Link to="/" className="link">
+            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               toolbox
             </Link>
           </div>

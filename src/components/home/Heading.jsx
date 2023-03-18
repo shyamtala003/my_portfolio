@@ -9,8 +9,7 @@ const Heading = ({ theme }) => {
     <main className={theme === "dark" ? "dark" : "light"}>
       <div className="heading">
         <h1 className="heading_text">
-          I'm <span>Shyam</span>. I'm a passionate frontend developer and
-          blogger from India.
+          I'm <span>Shyam</span>. I'm a passionate frontend developer from India.
         </h1>
         <div className="devloper_img">
           <LazyLoadImage alt="shyam tala" effect="blur" src={devImage} />
@@ -25,7 +24,7 @@ const Heading = ({ theme }) => {
         </Link>
       </div>
 
-      <h1 className="heading_end">~~~</h1>
+      <h1 className="heading_end">∿∿∿</h1>
     </main>
   );
 };

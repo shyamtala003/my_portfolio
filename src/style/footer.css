@@ -68,6 +68,13 @@ footer .footer_content {
     margin-block: .4rem;
 }
 
+.link_list a.link_under_construction
+{
+    opacity: .5;
+    cursor: no-drop;
+    pointer-events: stroke;
+}
+
 .link_list a.link:hover {
     color: var(--text-primary);
 }

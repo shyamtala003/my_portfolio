@@ -30,8 +30,8 @@ section.blog_section {
 
 .blog_card .card_img {
     width: 100%;
-    height: 393px;
-    min-height: 350px;
+    height: 420px;
+    min-height: 420px;
     /* background: red; */
     overflow: hidden;
     border-radius: 1rem;
@@ -89,6 +89,7 @@ section.blog_section {
 
 @media screen and (max-width:1150px) {
     .blogs_container {
+        margin-top: -.5rem;
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
