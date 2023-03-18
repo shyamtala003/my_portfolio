@@ -233,8 +233,14 @@ form.footer_form {
     }
 
     .footer_form .input_types {
-        flex-direction: column;
         margin-top: 3rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            'input_email' 
+            'submit_btn'
+            'msg';
+        place-items: center;
     }
 
     .input_types input[type="email"],
