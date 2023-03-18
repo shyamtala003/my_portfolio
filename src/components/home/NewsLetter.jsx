@@ -32,7 +32,7 @@ const NewsLetter = ({ theme }) => {
     }
 
     try {
-      const response = await axios.post("http://localhost:4000/getEmail", {
+      const response = await axios.post("https://newsletter-subscription-app.onrender.com/getEmail", {
         email: email,
       });
 
