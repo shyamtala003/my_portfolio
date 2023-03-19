@@ -68,8 +68,7 @@ footer .footer_content {
     margin-block: .4rem;
 }
 
-.link_list a.link_under_construction
-{
+.link_list a.link_under_construction {
     opacity: .5;
     cursor: no-drop;
     pointer-events: stroke;
@@ -109,8 +108,8 @@ form.footer_form {
     width: 100%;
     grid-template-columns: 1fr auto;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas:'input_email submit_btn'
-                        'msg msg';
+    grid-template-areas: 'input_email submit_btn'
+        'msg msg';
 }
 
 .input_types input[type="email"] {
@@ -136,11 +135,53 @@ form.footer_form {
     cursor: pointer;
 }
 
-.message_on_submit
-{
+.loading_button {
+    grid-area: submit_btn;
+    padding: .8rem 2rem .8rem 2rem;
+    background: #6365f197;
+    font-size: 16px;
+    line-height: 24px;
+    color: #f1f1f197;
+    border-radius: 3rem;
+    cursor: no-drop;
+}
+
+.ring {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 16px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1af;
+    border-bottom-color: transparent;
+    border-left-color: transparen   t;
+    animation: animate .5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.message_on_submit {
     grid-area: msg;
     margin-left: 25px;
-    color:lightgreen;
+    color: lightgreen;
     font-size: 14px;
     font-weight: 500;
     font-family: var(--font-inter);
@@ -237,7 +278,7 @@ form.footer_form {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
-            'input_email' 
+            'input_email'
             'submit_btn'
             'msg';
         place-items: center;

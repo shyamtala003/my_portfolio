@@ -381,6 +381,53 @@ section.newsletter {
     cursor: pointer;
 }
 
+.loading_button_newsletter
+{
+    grid-area: input-submit;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: var(--font-inter);
+    background: #6365f197;
+    color: #f1f1f197;
+    border-radius: 3rem;
+    cursor: no-drop;
+}
+
+.loading_button_newsletter .ring
+{
+    display: inline-block;
+    margin-left: 16px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1af;
+    border-bottom-color: transparent;
+    border-left-color: transparen   t;
+    animation: animate .5s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(90deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}z
+
 .newsletter form.news_subscription input[type="submit"]:hover {
     opacity: .8;
 }

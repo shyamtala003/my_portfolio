@@ -10,6 +10,9 @@ const NewsLetter = ({ theme }) => {
   // set response from axios request
   const [response_msg, setResponse_msg] = useState(false);
 
+    // state for displaying loading button
+    const [loading, setLoading] = useState(false);
+
   // change input value on change
   function manageEmailInput(e) {
     setEmail(String(e.target.value).toLowerCase());
@@ -20,10 +23,12 @@ const NewsLetter = ({ theme }) => {
 
     // prevent default action
     e.preventDefault();
+    setLoading(true);
 
     // validate email
     let checkEmail = validator.isEmail(email);
     if (!checkEmail) {
+      setLoading(false);
       setEmail("");
       setResponse_msg("Please enter a valid email");
       setTimeout(() => {
@@ -32,12 +37,14 @@ const NewsLetter = ({ theme }) => {
     }
 
     try {
+      setLoading(true);
       const response = await axios.post("https://newsletter-subscription-app.onrender.com/getEmail", {
         email: email,
       });
 
       // if email stored succesfully in database
       if (response.data.success) {
+        setLoading(false);
         setEmail("");
         setResponse_msg(response.data.message);
         setTimeout(() => {
@@ -46,6 +53,7 @@ const NewsLetter = ({ theme }) => {
       } 
       // if error accurs
       else {
+        setLoading(false);
         setEmail("");
         setResponse_msg(response.data.message);
         setTimeout(() => {
@@ -85,7 +93,13 @@ const NewsLetter = ({ theme }) => {
               onInput={manageEmailInput}
               value={email}
             />
-            <input type="submit" value={"Subscribe"} />
+            
+            {
+              loading? (
+                <button type="button" className="loading_button_newsletter">Subscribe <span className="ring"></span></button>
+              ) :<input type="submit" value="Subscribe" />
+            }
+
             {response_msg && (
               <div className="message_afer_submit">{response_msg}</div>
             )}

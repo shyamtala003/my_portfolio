@@ -12,6 +12,9 @@ const Footer = ({ theme }) => {
    // set response from axios request
    const [response_msg, setResponse_msg] = useState(false);
  
+  // state for displaying loading button
+  const [loading, setLoading] = useState(false);
+
    // change input value on change
    function manageEmailInput(e) {
      setEmail(String(e.target.value).toLowerCase());
@@ -20,12 +23,14 @@ const Footer = ({ theme }) => {
    // function for handling on submit 
    async function submitEmail(e) {
  
+    setLoading(true);
      // prevent default action
      e.preventDefault();
  
      // validate email
      let checkEmail = validator.isEmail(email);
      if (!checkEmail) {
+      setLoading(false);
        setEmail("");
        setResponse_msg("Please enter a valid email");
        setTimeout(() => {
@@ -34,6 +39,7 @@ const Footer = ({ theme }) => {
      }
  
      try {
+      setLoading(true);
        const response = await axios.post("https://newsletter-subscription-app.onrender.com/getEmail", {
          email: email,
        });
@@ -41,6 +47,7 @@ const Footer = ({ theme }) => {
        // if email stored succesfully in database
        if (response.data.success) {
          setEmail("");
+         setLoading(false);
          setResponse_msg(response.data.message);
          setTimeout(() => {
            setResponse_msg(false);
@@ -48,6 +55,7 @@ const Footer = ({ theme }) => {
        } 
        // if error accurs
        else {
+        setLoading(false);
          setEmail("");
          setResponse_msg(response.data.message);
          setTimeout(() => {
@@ -55,7 +63,7 @@ const Footer = ({ theme }) => {
          }, 5000);
        }
      } catch (error) {
-       console.log(error.response.data);
+       console.log(error.response.data);  
      }
    }
 
@@ -122,7 +130,14 @@ const Footer = ({ theme }) => {
               onInput={manageEmailInput}
               value={email}
             />
-            <input type="submit" value="Subscribe" />
+            
+            {
+              loading? (
+                <button type="button" className="loading_button">Subscribe <span className="ring"></span></button>
+              ) :<input type="submit" value="Subscribe" />
+            }
+            
+
             {response_msg && (
               <div className="message_on_submit">{response_msg}</div>
             )}
