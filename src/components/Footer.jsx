@@ -99,9 +99,9 @@ const Footer = ({ theme }) => {
             <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               newsletter
             </Link>
-            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
+            <a href="../../src/assets/resume_pdf/shyamtala.pdf" className="link" title="Resume" >
               resume
-            </Link>
+            </a>
             <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               snippets
             </Link>
