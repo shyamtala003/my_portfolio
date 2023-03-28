@@ -99,7 +99,7 @@ const Footer = ({ theme }) => {
             <Link to="/" className="link link_under_construction" title="Page Under Construction" >
               newsletter
             </Link>
-            <a href="../../src/assets/resume_pdf/shyamtala.pdf" className="link" title="Resume" >
+            <a href="https://drive.google.com/file/d/1sUo06mNkvIa6-AIK8Lk0OHnPWmvK8D-7/view?usp=sharing" className="link" title="Resume" >
               resume
             </a>
             <Link to="/" className="link link_under_construction" title="Page Under Construction" >
