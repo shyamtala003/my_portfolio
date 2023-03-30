@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Topfixedimage from "./components/Topfixedimage";
 
+// for animation
+import { motion, AnimatePresence } from "framer-motion";
+
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import About from "./components/About";
@@ -37,40 +40,50 @@ function App() {
   }, [theme]);
 
   return (
-    <div className={`${theme ? "dark" : "light"} main_container`}>
-      <Router>
-        <Navbar theme={theme} setTheme={setTheme} />
-        <Topfixedimage image={rayImage} />
-        <Routes>
-          <Route path="/" exact element={<Home theme={theme} />}></Route>
-          <Route path="/about" exact element={<About theme={theme} />}></Route>
-          <Route
-            path="/projects"
-            exact
-            element={<Projects theme={theme} />}
-          ></Route>
-          <Route path="/blogs" exact element={<Blogs theme={theme} />}></Route>
+    <AnimatePresence>
+      <div className={`${theme ? "dark" : "light"} main_container`}>
+        <Router>
+          <Navbar theme={theme} setTheme={setTheme} />
+          <Topfixedimage image={rayImage} />
+          <Routes>
+            <Route path="/" exact element={<Home theme={theme} />}></Route>
+            <Route
+              path="/about"
+              exact
+              element={<About theme={theme} />}
+            ></Route>
+            <Route
+              path="/projects"
+              exact
+              element={<Projects theme={theme} />}
+            ></Route>
+            <Route
+              path="/blogs"
+              exact
+              element={<Blogs theme={theme} />}
+            ></Route>
 
-          {/* all blogs route */}
-          <Route
-            path="/iife"
-            exact
-            element={<Iife theme={theme}></Iife>}
-          ></Route>
-          <Route
-            path="/Excecontext"
-            exact
-            element={<Excecontext theme={theme} />}
-          ></Route>
-          <Route
-            path="/hoisting"
-            exact
-            element={<Hoisting theme={theme} />}
-          ></Route>
-        </Routes>
-        <Footer theme={theme} />
-      </Router>
-    </div>
+            {/* all blogs route */}
+            <Route
+              path="/iife"
+              exact
+              element={<Iife theme={theme}></Iife>}
+            ></Route>
+            <Route
+              path="/Excecontext"
+              exact
+              element={<Excecontext theme={theme} />}
+            ></Route>
+            <Route
+              path="/hoisting"
+              exact
+              element={<Hoisting theme={theme} />}
+            ></Route>
+          </Routes>
+          <Footer theme={theme} />
+        </Router>
+      </div>
+    </AnimatePresence>
   );
 }
 

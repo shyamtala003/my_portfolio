@@ -13,6 +13,9 @@ import menuWhite from "../assets/menu_light.svg";
 
 import close from "../assets/close.svg";
 
+// framer motion for animation
+import { motion } from "framer-motion";
+
 const Navbar = ({ theme, setTheme }) => {
   // usestate for navbar open close
   let [navbarDisplay, setNavbarDisplay] = useState(false);
@@ -66,7 +69,10 @@ const Navbar = ({ theme, setTheme }) => {
 
   return (
     <>
-      <nav
+      <motion.nav
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ delay: 0.1, ease: "easeOut" }}
         className={`
         ${theme === "dark" ? "dark" : "light"} 
         ${!show && "hide_navbar"}`}
@@ -187,7 +193,7 @@ const Navbar = ({ theme, setTheme }) => {
             </button>
           </div>
         </div>
-      </nav>
+      </motion.nav>
     </>
   );
 };
