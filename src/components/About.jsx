@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Heading from "./Heading";
 import { Link } from "react-router-dom";
 import "../style/about.css";
+import { motion } from "framer-motion";
 
 const About = ({ theme }) => {
   // code for scroll top on component render
@@ -11,7 +12,12 @@ const About = ({ theme }) => {
 
   return (
     <>
-      <main className={`about ${theme === "dark" ? "dark" : "light"}`}>
+      <motion.main
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        initial={{ scale: 0, opacity: 0, y: 300 }}
+        transition={{ duration: 1 }}
+        className={`about ${theme === "dark" ? "dark" : "light"}`}
+      >
         <Heading heading="about me" description="Here's my story." />
         <div className="description">
           <p className="about_me_descrition">
@@ -239,7 +245,7 @@ const About = ({ theme }) => {
             </div>
           </section>
         </div>
-      </main>
+      </motion.main>
     </>
   );
 };

@@ -1,6 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const squareVariants = {
+  visible: { opacity: 1, scale: 1, y: 0 },
+  hidden: { opacity: 0, scale: 1, y: 100 },
+};
+
+const squareTransition = {
+  duration: 1, // add a duration of 4 seconds
+};
 
 const Projectcard = ({
   projectImage,
@@ -10,9 +21,24 @@ const Projectcard = ({
   linkBtnText,
   githubLink,
 }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.2 });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <>
-      <div className="project_card">
+      <motion.div
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        transition={squareTransition}
+        variants={squareVariants}
+        className="project_card"
+      >
         <div className="project_image">
           <LazyLoadImage alt={projectTitle} effect="blur" src={projectImage} />
           {/* <img  alt="" /> */}
@@ -29,7 +55,7 @@ const Projectcard = ({
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

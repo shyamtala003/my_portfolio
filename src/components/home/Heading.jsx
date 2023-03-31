@@ -40,7 +40,14 @@ const Heading = ({ theme }) => {
         </Link>
       </motion.div>
 
-      <h1 className="heading_end">∿∿∿</h1>
+      <motion.h1
+        className="heading_end"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1, ease: "easeIn" }}
+      >
+        ∿∿∿
+      </motion.h1>
     </main>
   );
 };

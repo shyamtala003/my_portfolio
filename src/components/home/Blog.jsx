@@ -1,18 +1,50 @@
-import React from "react";
+import Reac, { useEffect } from "react";
 import blog1Image from "../../assets/blog_images/iife.png";
 import blog2Image from "../../assets/blog_images/excecontext.webp";
 import blog3Image from "../../assets/blog_images/hoisting.webp";
 import { Link } from "react-router-dom";
 import Blogcard from "./Blogcard";
 
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const squareVariants = {
+  visible: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, scale: 0 },
+};
+
 const Blog = ({ theme }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 1 });
+  useEffect(() => {
+    console.log(inView);
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  // const { ref, inView } = useInView({
+  //   threshold: 0.2 , // set the threshold to 20%
+  // });
   return (
     <>
       <section
         className={`${theme === "dark" ? "dark" : "light"} blog_section`}
       >
-        <h1>I love to share my knowledge through writing.</h1>
-        <h3>Check out a few of my recent publishings.</h3>
+        <motion.h1
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 1, y: 100 }}
+          transition={{ duration: 0.5, delay: 2 }}
+        >
+          I love to share my knowledge through writing.
+        </motion.h1>
+        <motion.h3
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 1, y: 100 }}
+          transition={{ duration: 0.5, delay: 2 }}
+        >
+          Check out a few of my recent publishings.
+        </motion.h3>
 
         <div className="blogs_container">
           <Blogcard
