@@ -24,7 +24,6 @@ const NewsLetter = ({ theme }) => {
     if (inView) {
       controls.start("visible");
     }
-    console.log("call");
   }, [controls, inView]);
 
   // collecting inpuit email

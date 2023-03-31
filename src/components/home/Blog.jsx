@@ -17,7 +17,6 @@ const Blog = ({ theme }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 1 });
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       controls.start("visible");
     }
