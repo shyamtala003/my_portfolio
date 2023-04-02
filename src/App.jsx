@@ -24,6 +24,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Iife from "./components/All_blogs/Iife";
 import Excecontext from "./components/All_blogs/Excecontext";
 import Hoisting from "./components/All_blogs/Hoisting";
+import NormalVsArrowFunction from "./components/All_blogs/NormalVsArrowFunction";
 
 function App() {
   useEffect(() => {
@@ -78,6 +79,11 @@ function App() {
               path="/hoisting"
               exact
               element={<Hoisting theme={theme} />}
+            ></Route>
+            <Route
+              path="/NormalVsArrowFunctions"
+              exact
+              element={<NormalVsArrowFunction theme={theme} />}
             ></Route>
           </Routes>
           <Footer theme={theme} />
