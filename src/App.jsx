@@ -6,6 +6,8 @@ import Topfixedimage from "./components/Topfixedimage";
 // for animation
 import { motion, AnimatePresence } from "framer-motion";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import About from "./components/About";
@@ -44,6 +46,7 @@ function App() {
     <AnimatePresence>
       <div className={`${theme ? "dark" : "light"} main_container`}>
         <Router>
+          <ScrollToTop />
           <Navbar theme={theme} setTheme={setTheme} />
           <Topfixedimage image={rayImage} />
           <Routes>

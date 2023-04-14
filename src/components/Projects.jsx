@@ -16,11 +16,6 @@ import p10Image from "../assets/project_images/p10.webp";
 import p11Image from "../assets/project_images/p11.webp";
 
 const Projects = ({ theme }) => {
-  // code for scroll top on component render
-  (() => {
-    window.scrollTo(0, 0);
-  })();
-
   return (
     <>
       <main className={`${theme === "dark" ? "dark" : "light"} projects`}>

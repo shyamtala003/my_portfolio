@@ -5,11 +5,6 @@ import "../style/about.css";
 import { motion } from "framer-motion";
 
 const About = ({ theme }) => {
-  // code for scroll top on component render
-  (() => {
-    window.scrollTo(0, 0);
-  })();
-
   return (
     <>
       <motion.main

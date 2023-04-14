@@ -4,11 +4,6 @@ import Blogcontainer from "./blogs/Blogcontainer";
 import Heading from "./Heading";
 
 const blogs = ({ theme }) => {
-  // code for scroll top on component render
-  (() => {
-    window.scrollTo(0, 0);
-  })();
-
   return (
     <>
       <main className={`blog_container ${theme === "dark" ? "dark" : "light"}`}>
