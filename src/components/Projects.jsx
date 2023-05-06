@@ -14,6 +14,7 @@ import p8Image from "../assets/project_images/p8.webp";
 import p9Image from "../assets/project_images/p9.webp";
 import p10Image from "../assets/project_images/p10.webp";
 import p11Image from "../assets/project_images/p11.webp";
+import p12Image from "../assets/project_images/p12.webp";
 
 const Projects = ({ theme }) => {
   return (
@@ -24,6 +25,15 @@ const Projects = ({ theme }) => {
           description="A selection of my favorite works."
         />
         <section className="project_container">
+          <Projectcard
+            projectImage={p12Image}
+            projectTitle="Full-Stack MERN  Blogging Site"
+            projectDescription="Developed a fully functional and responsive blogging website using MERN stack, hosted on Render.com for back-end and Vercel for front-end. Implemented features allowing users to write, edit, and share their blog posts, as well as add high-quality images.
+"
+            liveLinkUrl="https://dotblogs.vercel.app"
+            linkBtnText="Preview Link"
+            githubLink="https://github.com/shyamtala003/blogging-site"
+          />
           <Projectcard
             projectImage={p6Image}
             projectTitle="Financial dashboard(Figma to Code)"
