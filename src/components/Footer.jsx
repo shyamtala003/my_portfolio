@@ -5,67 +5,68 @@ import { Link } from "react-router-dom";
 import "../style/footer.css";
 
 const Footer = ({ theme }) => {
+  // collecting inpuit email
+  const [email, setEmail] = useState("");
 
-   // collecting inpuit email
-   const [email, setEmail] = useState("");
+  // set response from axios request
+  const [response_msg, setResponse_msg] = useState(false);
 
-   // set response from axios request
-   const [response_msg, setResponse_msg] = useState(false);
- 
   // state for displaying loading button
   const [loading, setLoading] = useState(false);
 
-   // change input value on change
-   function manageEmailInput(e) {
-     setEmail(String(e.target.value).toLowerCase());
-   }
- 
-   // function for handling on submit 
-   async function submitEmail(e) {
- 
+  // change input value on change
+  function manageEmailInput(e) {
+    setEmail(String(e.target.value).toLowerCase());
+  }
+
+  // function for handling on submit
+  async function submitEmail(e) {
     setLoading(true);
-     // prevent default action
-     e.preventDefault();
- 
-     // validate email
-     let checkEmail = validator.isEmail(email);
-     if (!checkEmail) {
+    // prevent default action
+    e.preventDefault();
+
+    // validate email
+    let checkEmail = validator.isEmail(email);
+    if (!checkEmail) {
       setLoading(false);
-       setEmail("");
-       setResponse_msg("Please enter a valid email");
-       setTimeout(() => {
-         setResponse_msg(false);
-       }, 5000);
-     }
- 
-     try {
+      setEmail("");
+      setResponse_msg("Please enter a valid email");
+      setTimeout(() => {
+        setResponse_msg(false);
+      }, 5000);
+    }
+
+    try {
       setLoading(true);
-       const response = await axios.post("https://newsletter-subscription-app.onrender.com/getEmail", {
-         email: email,
-       });
- 
-       // if email stored succesfully in database
-       if (response.data.success) {
-         setEmail("");
-         setLoading(false);
-         setResponse_msg(response.data.message);
-         setTimeout(() => {
-           setResponse_msg(false);
-         }, 5000);
-       } 
-       // if error accurs
-       else {
+      const response = await axios.post(
+        "https://newsletter-subscription-app.onrender.com/getEmail",
+        {
+          email: email,
+        }
+      );
+
+      // if email stored succesfully in database
+      if (response.data.success) {
+        setEmail("");
         setLoading(false);
-         setEmail("");
-         setResponse_msg(response.data.message);
-         setTimeout(() => {
-           setResponse_msg(false);
-         }, 5000);
-       }
-     } catch (error) {
-       console.log(error.response.data);  
-     }
-   }
+        setResponse_msg(response.data.message);
+        setTimeout(() => {
+          setResponse_msg(false);
+        }, 5000);
+      }
+      // if error accurs
+      else {
+        setLoading(false);
+        setEmail("");
+        setResponse_msg(response.data.message);
+        setTimeout(() => {
+          setResponse_msg(false);
+        }, 5000);
+      }
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  }
 
   return (
     <footer className={`${theme === "dark" ? "dark" : "light"}`}>
@@ -90,29 +91,57 @@ const Footer = ({ theme }) => {
 
           <div className="link_list">
             <p className="link_heading">extra</p>
-            <Link to="/" className="link link_under_construction" title="Page Under Construction">
+            <Link
+              to="/"
+              className="link link_under_construction"
+              title="Page Under Construction"
+            >
               changelog
             </Link>
-            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
+            <Link
+              to="/"
+              className="link link_under_construction"
+              title="Page Under Construction"
+            >
               meet up
             </Link>
-            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
+            <Link
+              to="/"
+              className="link link_under_construction"
+              title="Page Under Construction"
+            >
               newsletter
             </Link>
-            <a href="https://drive.google.com/file/d/1sUo06mNkvIa6-AIK8Lk0OHnPWmvK8D-7/view?usp=sharing" className="link" title="Resume" >
+            <a
+              href="https://drive.google.com/file/d/1B3-N6XL3d9pr4vzTtHyIicLiGnaoLf_4/view"
+              className="link"
+              title="Resume"
+            >
               resume
             </a>
-            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
+            <Link
+              to="/"
+              className="link link_under_construction"
+              title="Page Under Construction"
+            >
               snippets
             </Link>
           </div>
 
           <div className="link_list">
             <p className="link_heading">specifics</p>
-            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
+            <Link
+              to="/"
+              className="link link_under_construction"
+              title="Page Under Construction"
+            >
               stats
             </Link>
-            <Link to="/" className="link link_under_construction" title="Page Under Construction" >
+            <Link
+              to="/"
+              className="link link_under_construction"
+              title="Page Under Construction"
+            >
               toolbox
             </Link>
           </div>
@@ -130,13 +159,14 @@ const Footer = ({ theme }) => {
               onInput={manageEmailInput}
               value={email}
             />
-            
-            {
-              loading? (
-                <button type="button" className="loading_button">Subscribe <span className="ring"></span></button>
-              ) :<input type="submit" value="Subscribe" />
-            }
-            
+
+            {loading ? (
+              <button type="button" className="loading_button">
+                Subscribe <span className="ring"></span>
+              </button>
+            ) : (
+              <input type="submit" value="Subscribe" />
+            )}
 
             {response_msg && (
               <div className="message_on_submit">{response_msg}</div>
