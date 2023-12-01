@@ -14,7 +14,7 @@ const Heading = ({ theme }) => {
           transition={{ delay: 0.5, duration: 1, ease: "easeIn" }}
           className="heading_text"
         >
-          I'm <span>Shyam</span>. I'm a passionate Full Stack JavaScript
+          I'm <span>Shyam Tala</span>. I'm a passionate Full Stack JavaScript
           developer from India.
         </motion.h1>
         <motion.div
